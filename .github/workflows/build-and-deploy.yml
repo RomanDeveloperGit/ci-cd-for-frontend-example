@@ -1,7 +1,7 @@
 name: Build & Deploy
 on: [push, workflow_dispatch]
 env:
-  REACT_APP_SECRET_CODE: secret-code
+  REACT_APP_SECRET_CODE: 1234567
 jobs:
   build:
     runs-on: ubuntu-latest
