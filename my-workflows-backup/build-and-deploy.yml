@@ -11,7 +11,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Build project
-        run: npx cross-env REACT_APP_SECRET_CODE = ${{ env.REACT_APP_SECRET_CODE }} react-scripts start
+        run: npx cross-env REACT_APP_SECRET_CODE = ${{ env.REACT_APP_SECRET_CODE }} react-scripts build
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
