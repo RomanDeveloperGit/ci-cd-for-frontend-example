@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  console.log(process.env);
+  console.log('env', { env: process.env });
 
   return (
     <div className="App">
