@@ -1,5 +1,7 @@
 name: Build & Deploy
 on: [push, workflow_dispatch]
+env:
+  REACT_APP_SECRET_CODE: secret-code
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,7 +11,7 @@ jobs:
       - name: Install deps
         run: npm ci
       - name: Build project
-        run: npm run build
+        run: npx cross-env REACT_APP_SECRET_CODE = ${{ env.REACT_APP_SECRET_CODE }} react-scripts build
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
