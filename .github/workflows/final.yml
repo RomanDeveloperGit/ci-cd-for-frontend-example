@@ -7,7 +7,7 @@ on:
       - '.github/workflows/*'
   workflow_dispatch:
 env:
-  REACT_APP_SECRET_CODE: 1234567
+  REACT_APP_SECRET_CODE: 'secret-code'
 jobs:
   test:
     runs-on: ubuntu-latest
